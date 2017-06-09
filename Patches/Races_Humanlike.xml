@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[defName="Human"]/recipes/li[.="Euthanize"]</xpath>
+		<value>
+			<li>ReconstructSurgery</li>
+			<li>GraftSynthTissue</li>
+			<li>GraftSynthDigit</li>
+		</value>
+	</Operation>
+
+</Patch>
+

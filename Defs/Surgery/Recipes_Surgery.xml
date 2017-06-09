@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+  <RecipeDef Abstract="True" Name="SurgeryFlesh">
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+  </RecipeDef>
+	
+  <RecipeDef ParentName="SurgeryFlesh">
+		<defName>GraftSynthTissue</defName>
+		<label>graft synthetic tissue</label>
+		<description>Recovers permanent damage.</description>
+		<workerClass>Panacea.Recipe_RemoveOldHediff</workerClass>
+		<jobString>Grafting tissue.</jobString>
+		<workAmount>9000</workAmount>
+    <surgerySuccessChanceFactor>0.8</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+          <categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+          <thingDefs>
+						<li>Panacea</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+      <categories>
+				<li>Medicine</li>
+			</categories>
+      <thingDefs>
+        <li>Panacea</li>
+      </thingDefs>
+		</fixedIngredientFilter>
+		<skillRequirements>
+			<li>
+				<skill>Medicine</skill>
+				<minLevel>8</minLevel>
+			</li>
+		</skillRequirements>
+		<hideBodyPartNames>true</hideBodyPartNames>
+  </RecipeDef>
+	
+  <RecipeDef ParentName="SurgeryFlesh">
+		<defName>GraftSynthDigit</defName>
+		<label>graft</label>
+		<description>Restores lost digits.</description>
+		<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+		<jobString>Grafting digit.</jobString>
+		<workAmount>9000</workAmount>
+    <surgerySuccessChanceFactor>0.8</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+          <categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+          <thingDefs>
+						<li>Panacea</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+          <thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+      <categories>
+				<li>Medicine</li>
+			</categories>
+      <thingDefs>
+        <li>Panacea</li>
+        <li>Steel</li>
+      </thingDefs>
+		</fixedIngredientFilter>
+		<skillRequirements>
+			<li>
+				<skill>Medicine</skill>
+				<minLevel>8</minLevel>
+			</li>
+		</skillRequirements>
+		<appliedOnFixedBodyParts>
+			<li>LeftHandPinky</li>
+			<li>LeftHandRingFinger</li>
+			<li>LeftHandMiddleFinger</li>
+			<li>LeftHandIndexFinger</li>
+			<li>LeftHandThumb</li>
+			<li>RightHandPinky</li>
+			<li>RightHandRingFinger</li>
+			<li>RightHandMiddleFinger</li>
+			<li>RightHandIndexFinger</li>
+			<li>RightHandThumb</li>
+			<li>LeftFootLittleToe</li>
+			<li>LeftFootFourthToe</li>
+			<li>LeftFootMiddleToe</li>
+			<li>LeftFootSecondToe</li>
+			<li>LeftFootBigToe</li>
+			<li>RightFootLittleToe</li>
+			<li>RightFootFourthToe</li>
+			<li>RightFootMiddleToe</li>
+			<li>RightFootSecondToe</li>
+			<li>RightFootBigToe</li>
+		</appliedOnFixedBodyParts>
+  </RecipeDef>
+	
+  <RecipeDef ParentName="SurgeryFlesh">
+		<defName>ReconstructSurgery</defName>
+		<label>Reconstruct</label>
+		<description>Reconstructs facial features.</description>
+		<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+		<jobString>Reconstructing face.</jobString>
+		<workAmount>6000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+          <categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+          <thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+      <categories>
+				<li>Medicine</li>
+			</categories>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+		</fixedIngredientFilter>
+		<skillRequirements>
+			<li>
+				<skill>Medicine</skill>
+				<minLevel>6</minLevel>
+			</li>
+		</skillRequirements>
+		<appliedOnFixedBodyParts>
+			<li>Nose</li>
+			<li>LeftEar</li>
+			<li>RightEar</li>
+		</appliedOnFixedBodyParts>
+  </RecipeDef>
+  	
+</RecipeDefs>
