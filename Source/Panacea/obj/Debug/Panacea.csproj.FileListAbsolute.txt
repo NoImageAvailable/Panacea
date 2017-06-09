@@ -1,3 +1,0 @@
-D:\Games\RimWorld1557Win\Mods\ReconstructiveSurgery\Assemblies\Panacea.dll
-D:\Games\RimWorld1557Win\Mods\ReconstructiveSurgery\Source\Panacea\obj\Debug\Panacea.csprojResolveAssemblyReference.cache
-D:\Games\RimWorld1557Win\Mods\ReconstructiveSurgery\Source\Panacea\obj\Debug\Panacea.dll
