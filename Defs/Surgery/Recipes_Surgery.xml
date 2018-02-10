@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<RecipeDefs>
+<Defs>
 
   <RecipeDef Abstract="True" Name="SurgeryFlesh">
     <effectWorking>Surgery</effectWorking>
@@ -16,7 +16,7 @@
 		<workerClass>Panacea.Recipe_RemoveOldHediff</workerClass>
 		<jobString>Grafting tissue.</jobString>
 		<workAmount>9000</workAmount>
-    <surgerySuccessChanceFactor>0.8</surgerySuccessChanceFactor>
+    <surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
 		<ingredients>
 			<li>
 				<filter>
@@ -32,7 +32,7 @@
 						<li>Panacea</li>
 					</thingDefs>
 				</filter>
-				<count>2</count>
+				<count>1</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -44,10 +44,7 @@
       </thingDefs>
 		</fixedIngredientFilter>
 		<skillRequirements>
-			<li>
-				<skill>Medicine</skill>
-				<minLevel>8</minLevel>
-			</li>
+			<Medicine>8</Medicine>
 		</skillRequirements>
 		<hideBodyPartNames>true</hideBodyPartNames>
   </RecipeDef>
@@ -59,7 +56,7 @@
 		<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
 		<jobString>Grafting digit.</jobString>
 		<workAmount>9000</workAmount>
-    <surgerySuccessChanceFactor>0.8</surgerySuccessChanceFactor>
+    <surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
 		<ingredients>
 			<li>
 				<filter>
@@ -96,10 +93,7 @@
       </thingDefs>
 		</fixedIngredientFilter>
 		<skillRequirements>
-			<li>
-				<skill>Medicine</skill>
-				<minLevel>8</minLevel>
-			</li>
+			<Medicine>8</Medicine>
 		</skillRequirements>
 		<appliedOnFixedBodyParts>
 			<li>LeftHandPinky</li>
@@ -159,10 +153,7 @@
       </thingDefs>
 		</fixedIngredientFilter>
 		<skillRequirements>
-			<li>
-				<skill>Medicine</skill>
-				<minLevel>6</minLevel>
-			</li>
+			<Medicine>6</Medicine>
 		</skillRequirements>
 		<appliedOnFixedBodyParts>
 			<li>Nose</li>
@@ -171,4 +162,4 @@
 		</appliedOnFixedBodyParts>
   </RecipeDef>
   	
-</RecipeDefs>
+</Defs>

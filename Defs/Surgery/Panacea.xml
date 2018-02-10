@@ -30,6 +30,7 @@
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <statBases>
+      <WorkToMake>1400</WorkToMake>
       <MaxHitPoints>50</MaxHitPoints>
       <Mass>0.02</Mass>
       <Flammability>1.0</Flammability>
@@ -46,14 +47,8 @@
       </recipeUsers>
       <researchPrerequisite>MedicineProduction</researchPrerequisite>
       <skillRequirements>
-        <li>
-          <skill>Medicine</skill>
-          <minLevel>6</minLevel>
-        </li>
-        <li>
-          <skill>Crafting</skill>
-          <minLevel>3</minLevel>
-        </li>
+        <Medicine>6</Medicine>
+        <Crafting>3</Crafting>
       </skillRequirements>
     </recipeMaker>
     <costList>

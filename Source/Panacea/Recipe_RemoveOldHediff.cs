@@ -13,16 +13,17 @@ namespace Panacea
         private const float BaseSeverityReduction = 6f; // The base value for scar reduction
         private const float reductionVariance = 2f;     // Reduction is randomized by +- this value
 
-        public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients)
+        public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         {
-            if (CheckSurgeryFail(billDoer, pawn, ingredients, part)) return;
-            TaleRecorder.RecordTale(TaleDefOf.DidSurgery, new object[] { billDoer, pawn });
+            if (CheckSurgeryFail(billDoer, pawn, ingredients, part, bill)) return;
+            TaleRecorder.RecordTale(TaleDefOf.DidSurgery, billDoer, pawn);
 
             // Calculate how much damage we reduced
             float amountReduced = Mathf.Max(0, BaseSeverityReduction + Rand.Range(-reductionVariance, reductionVariance)) * billDoer.GetStatValue(StatDefOf.MedicalTendQuality);
 
             // Find all scars
-            List<Hediff> scars = pawn.health.hediffSet.hediffs.FindAll(h => h.IsOld());
+            var partsToApplyTo = GetPartsToApplyOn(pawn, bill.recipe).ToArray();
+            List<Hediff> scars = pawn.health.hediffSet.hediffs.FindAll(h => h.IsOld() && partsToApplyTo.Contains(h.Part));
             foreach (Hediff scar in scars)
             {
                 // Reduce scars until we run out of reduction
@@ -39,7 +40,7 @@ namespace Panacea
                 }
             }
         }
-        
+
         public override IEnumerable<BodyPartRecord> GetPartsToApplyOn(Pawn pawn, RecipeDef recipe)
         {
             if (pawn.RaceProps.IsFlesh && pawn.health.hediffSet.hediffs.Any(h => h.IsOld() && h.Part.depth == BodyPartDepth.Outside && !h.Part.def.IsDelicate && !pawn.health.hediffSet.PartIsMissing(h.Part)))

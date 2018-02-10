@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Paradol>
+<Defs>
 
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>Paradol</defName>
@@ -146,4 +146,4 @@
     </stages>
   </ThoughtDef>
   
-</Paradol>
+</Defs>
