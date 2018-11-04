@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using RimWorld;
 using Verse;
 using UnityEngine;
@@ -23,7 +21,8 @@ namespace Panacea
 
             // Find all scars
             var partsToApplyTo = GetPartsToApplyOn(pawn, bill.recipe).ToArray();
-            List<Hediff> scars = pawn.health.hediffSet.hediffs.FindAll(h => h.IsOld() && partsToApplyTo.Contains(h.Part));
+            
+            List<Hediff> scars = pawn.health.hediffSet.hediffs.FindAll(h => h.IsPermanent() && partsToApplyTo.Contains(h.Part));
             foreach (Hediff scar in scars)
             {
                 // Reduce scars until we run out of reduction
@@ -43,7 +42,7 @@ namespace Panacea
 
         public override IEnumerable<BodyPartRecord> GetPartsToApplyOn(Pawn pawn, RecipeDef recipe)
         {
-            if (pawn.RaceProps.IsFlesh && pawn.health.hediffSet.hediffs.Any(h => h.IsOld() && h.Part.depth == BodyPartDepth.Outside && !h.Part.def.IsDelicate && !pawn.health.hediffSet.PartIsMissing(h.Part)))
+            if (pawn.RaceProps.IsFlesh && pawn.health.hediffSet.hediffs.Any(h => h.IsPermanent() && h.Part.depth == BodyPartDepth.Outside && !h.Part.def.delicate && !pawn.health.hediffSet.PartIsMissing(h.Part)))
             {
                 yield return pawn.RaceProps.body.corePart;
             }

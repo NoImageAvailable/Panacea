@@ -179,7 +179,7 @@
         </capMods>
         <mentalStateGivers>
 					<li>
-						<mentalState>BingingDrugExtreme</mentalState>
+						<mentalState>Binging_DrugExtreme</mentalState>
 						<mtbDays>40</mtbDays>
 					</li>
         </mentalStateGivers>

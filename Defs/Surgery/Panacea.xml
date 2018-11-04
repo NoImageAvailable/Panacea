@@ -40,7 +40,7 @@
       <li>Manufactured</li>
     </thingCategories>
     <recipeMaker>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
       <recipeUsers>
         <li>DrugLab</li>
@@ -53,7 +53,7 @@
     </recipeMaker>
     <costList>
       <Neutroamine>1</Neutroamine>
-      <GlitterworldMedicine>1</GlitterworldMedicine>
+      <MedicineUltratech>1</MedicineUltratech>
     </costList>
     <tradeTags>
       <li>Exotic</li>
