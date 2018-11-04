@@ -1,6 +1,7 @@
 *.suo
 *.cache
 */Thumbs.db
+.idea/
 /Source/*/bin/*
 /Source/*/obj/*
 /Source/*/*.csproj.user
