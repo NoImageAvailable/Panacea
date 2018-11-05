@@ -96,26 +96,8 @@
 			<Medicine>8</Medicine>
 		</skillRequirements>
 		<appliedOnFixedBodyParts>
-			<li>LeftHandPinky</li>
-			<li>LeftHandRingFinger</li>
-			<li>LeftHandMiddleFinger</li>
-			<li>LeftHandIndexFinger</li>
-			<li>LeftHandThumb</li>
-			<li>RightHandPinky</li>
-			<li>RightHandRingFinger</li>
-			<li>RightHandMiddleFinger</li>
-			<li>RightHandIndexFinger</li>
-			<li>RightHandThumb</li>
-			<li>LeftFootLittleToe</li>
-			<li>LeftFootFourthToe</li>
-			<li>LeftFootMiddleToe</li>
-			<li>LeftFootSecondToe</li>
-			<li>LeftFootBigToe</li>
-			<li>RightFootLittleToe</li>
-			<li>RightFootFourthToe</li>
-			<li>RightFootMiddleToe</li>
-			<li>RightFootSecondToe</li>
-			<li>RightFootBigToe</li>
+			<li>Toe</li>
+			<li>Finger</li>
 		</appliedOnFixedBodyParts>
   </RecipeDef>
 	
@@ -157,8 +139,7 @@
 		</skillRequirements>
 		<appliedOnFixedBodyParts>
 			<li>Nose</li>
-			<li>LeftEar</li>
-			<li>RightEar</li>
+			<li>Ear</li>
 		</appliedOnFixedBodyParts>
   </RecipeDef>
   	

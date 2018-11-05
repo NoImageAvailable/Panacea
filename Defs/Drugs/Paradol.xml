@@ -121,7 +121,7 @@
         <painFactor>1.2</painFactor>
         <mentalStateGivers>
           <li>
-            <mentalState>BingingDrugExtreme</mentalState>
+            <mentalState>Binging_DrugExtreme</mentalState>
             <mtbDays>80</mtbDays>
           </li>
         </mentalStateGivers>
